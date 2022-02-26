@@ -54,11 +54,11 @@ def clean():
     global selected
     selected=""
 
-        
+bg_colour ="#007f00"
 #programming window
 root=Tk()
 root.title("Data Encryption")
-root.config(bg="#00818A")
+root.config(bg=bg_colour)
 root.geometry("600x300")
 root.resizable(False,False)
 
@@ -75,11 +75,11 @@ root.iconphoto(False ,icon)
 
 
 #labels
-text_label=Label(root,text="Enter Text",font="ariel 11 bold",bg="#00818A")
+text_label=Label(root,text="Enter Text",font="ariel 11 bold",bg=bg_colour)
 text_label.grid(row=0,column=0)
-drop_down_level=Label(root,text="Select Encryption Type",font="ariel 11 bold",bg="#00818A")
+drop_down_level=Label(root,text="Select Encryption Type",font="ariel 11 bold",bg=bg_colour)
 drop_down_level.grid(row=1,column=0,padx=10,pady=10)
-output=Label(root,text="OUTPUT",font="ariel 11 bold",bg="#00818A")
+output=Label(root,text="OUTPUT",font="ariel 11 bold",bg=bg_colour)
 output.grid(row=2,columnspan=2,padx=10,pady=10)
 
 #text box to show information to the user and get input from the user
@@ -99,12 +99,12 @@ clicked.set("selcet option")
 #dropdown list (option menu) to show multiple options
 drop=OptionMenu(root,clicked,*methods,command=selected_option)
 drop.grid(row=1,column=1)
-drop.config(indicatoron=0,image=drop_img,compound="right",highlightthickness=0,bg="#00818A",height=15)
+drop.config(indicatoron=0,image=drop_img,compound="right",highlightthickness=0,bg=bg_colour,height=15)
 
 
 #button to perform action
-reset=Button(root,image=reset_image,command=clean,bg="#00818A")
+reset=Button(root,image=reset_image,command=clean,bg=bg_colour)
 reset.grid(row=4,column=0,padx=10,pady=10)
-submit_button=Button(root,bg="#00818A",command=result,image=submit_image)
+submit_button=Button(root,bg=bg_colour,command=result,image=submit_image)
 submit_button.grid(row=4,column=1,padx=10,pady=10)
 root.mainloop()
